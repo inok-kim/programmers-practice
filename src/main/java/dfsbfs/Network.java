@@ -18,13 +18,13 @@ public class Network {
         return answer;
     }
 
-    boolean[] dfs(int[][] computers, int i, boolean[] check) {
-        check[i] = true;
+    boolean[] dfs(int[][] computers, int current, boolean[] check) {
+        check[current] = true;
 
-        for(int j=0; j<computers.length; j++) {
+        for(int i=0; i<computers.length; i++) {
             // 내 위치가 아니면서, 연결되어 있고, 방문한적 없을때.. 재귀 호출해서 해당 위치 true로 변경
-            if(i != j && computers[i][j] == 1 && check[j] == false) {
-                check = dfs(computers, j, check);
+            if(current != i && computers[current][i] == 1 && check[i] == false) {
+                check = dfs(computers, i, check);
             }
         }
         return check;
