@@ -29,4 +29,15 @@ class WordConversionTest {
 
         assertEquals(answer, 0);
     }
+
+    @Test
+    void solution3() {
+        String begin = "hit";
+        String target = "cog";
+        String[] words = {"hot", "hog", "dot", "dog", "lot", "log", "cog"};
+
+        int answer = wordConversion.solution(begin,target,words);
+
+        assertEquals(answer, 3);
+    }
 }
