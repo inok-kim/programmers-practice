@@ -26,4 +26,13 @@ class TravelRouteTest {
         assertThat(answer).containsExactly("ICN", "ATL", "ICN", "SFO", "ATL", "SFO");
     }
 
+    @Test
+    void solution3() {
+        String[][] tickets = {{"ICN", "AOO"}, {"AOO", "BOO"}, {"BOO", "COO"}, {"COO", "DOO"}, {"DOO", "EOO"}, {"EOO", "DOO"}, {"DOO", "COO"}, {"COO", "BOO"}, {"BOO", "AOO"}};
+
+        String[] answer = travelRoute.solution(tickets);
+
+        assertThat(answer).containsExactly("ICN", "AOO", "BOO", "COO", "DOO", "EOO", "DOO", "COO", "BOO", "AOO");
+    }
+
 }
