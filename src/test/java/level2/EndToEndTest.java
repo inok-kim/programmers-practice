@@ -39,5 +39,4 @@ class EndToEndTest {
         int[] result = endToEnd.solution(n, words);
         Assertions.assertThat(result).isEqualTo(answer);
     }
-
 }

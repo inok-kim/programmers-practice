@@ -58,7 +58,6 @@ public class EndToEnd {
                 int turn = (i+1+1) / n;
                 return ordinal == 0 ? new int[]{n, turn}: new int[]{ordinal, turn+1};
             }
-
         }
 
         return answer;
